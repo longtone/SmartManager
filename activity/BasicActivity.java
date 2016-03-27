@@ -11,5 +11,6 @@ public class BasicActivity extends Activity {
 
     }
     public void initWindows(){
+
     }
 }
