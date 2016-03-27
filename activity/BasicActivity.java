@@ -38,4 +38,8 @@ public class BasicActivity extends Activity {
         }
         return result;
     }
+    public  void setFull(Activity activity){
+        activity.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
+        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+    }
 }
