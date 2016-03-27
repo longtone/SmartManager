@@ -1,9 +1,10 @@
 package com.app.carrot.smartmanager.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.app.carrot.smartmanager.R;
+
+public class MainActivity extends BasicActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
