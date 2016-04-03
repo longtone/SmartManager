@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="53dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/hide"
+        android:background="@color/maincolor" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bar_height"
         android:background="@color/maincolor"
         android:padding="0sp"
     >
@@ -13,27 +23,47 @@
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:weightSum="1">
 
-            <ImageView
-                android:layout_width="60sp"
-                android:layout_height="match_parent"
-                android:id="@+id/imageView"
-                android:src="@drawable/menu"
-                android:scaleType="fitXY"
-                android:paddingStart="10dp"
-                android:padding="15dp"
-                android:contentDescription="ll" />
-
-            <TextView
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="界面"
-                android:id="@+id/textView3"
-                android:textColor="@color/white"
-                android:textSize="20sp"
-                android:gravity="left|center" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="界面"
+                    android:id="@+id/title"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:layout_width="@dimen/bar_height"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mymenu"
+                    android:src="@drawable/menu"
+                    android:scaleType="fitXY"
+
+                    android:contentDescription="ll"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
         </LinearLayout>
+
     </GridLayout>
 
 </LinearLayout>

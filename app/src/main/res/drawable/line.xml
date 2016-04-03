@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+
+    <!-- 这是半透明，还可以设置全透明，那就是白色边框的效果了 -->
+    <solid android:color="#00068d82" />
+    <stroke
+        android:dashGap="0dp"
+        android:width="0.1dp"
+        android:color="#4b4a4a" />
+</shape>

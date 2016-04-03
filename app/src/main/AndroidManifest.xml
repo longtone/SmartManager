@@ -30,7 +30,8 @@
             android:name=".activity.ViewPageActivity"
             android:label="@string/title_activity_view_page"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.FeeActivity"></activity>
     </application>
 
 </manifest>

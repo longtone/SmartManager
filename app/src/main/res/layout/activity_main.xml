@@ -14,14 +14,7 @@
         android:layout_width="match_parent"
         android:background="@color/maincolor"
         android:layout_height="wrap_content">
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/hide"
-            android:background="@color/maincolor" />
+
         <include layout="@layout/bar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
@@ -33,19 +26,18 @@
             android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:tabIndicatorColor="@color/maincolor"
+            app:tabIndicatorColor="@color/white"
             app:tabTextColor="@color/white"
-            app:tabSelectedTextColor="@color/white"
-            android:touchscreenBlocksFocus="false" />
+            app:tabSelectedTextColor="@color/SelectedTextColor"
+            app:tabIndicatorHeight="2sp"/>
 
     </android.support.design.widget.AppBarLayout>
 
-    <Button
+    Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="toast"
         android:id="@+id/toast" />
-
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpage"
         android:layout_width="match_parent"
