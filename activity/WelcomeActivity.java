@@ -26,4 +26,5 @@ public class WelcomeActivity extends BasicActivity {
         };
         timer.schedule(task, 2000);
     }
+
 }
