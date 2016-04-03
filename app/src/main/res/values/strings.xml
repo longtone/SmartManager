@@ -3,4 +3,10 @@
     <string name="title_activity_base">BaseActivity</string>
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_view_page">ViewPageActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
