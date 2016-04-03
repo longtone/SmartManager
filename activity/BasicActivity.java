@@ -9,31 +9,23 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.app.carrot.smartmanager.R;
 
 public class BasicActivity extends AppCompatActivity{
 
     private  static Toast mToast;
     private long mExitTime=0;
-
+    private Activity mActivity;
+    final  initActivity initActivity=new initActivity();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
     }
-    public void initWindows(Activity activity, View titleViewGroup) {
-        if (activity == null)
-            return;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            Window window = activity.getWindow();
-            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
-        if (titleViewGroup == null)
-            return;
-        // 设置头部控件ViewGroup的PaddingTop,防止界面与状态栏重叠
-        int statusBarHeight = getStatusBarHeight(activity);
-        titleViewGroup.setPadding(0, statusBarHeight, 0, 0);
-        }
+
 
     private static int getStatusBarHeight(Context context) {
         int result = 0;
@@ -44,7 +36,7 @@ public class BasicActivity extends AppCompatActivity{
         }
         return result;
     }
-    public  void setFull(Activity activity){
+    public  void setFullScreen(Activity activity){
         activity.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
     }
@@ -85,6 +77,50 @@ public class BasicActivity extends AppCompatActivity{
             finish();
             System.exit(0);
         }
+    }
+
+
+    public class initActivity{
+        public void initWindows(Activity activity, View titleViewGroup) {
+            if (activity == null)
+                return;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                Window window = activity.getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            }
+            if (titleViewGroup == null)
+                return;
+            // 设置头部控件ViewGroup的PaddingTop,防止界面与状态栏重叠
+            int statusBarHeight = getStatusBarHeight(activity);
+            titleViewGroup.setPadding(0, statusBarHeight, 0, 0);
+        }
+        public void initWindows(){
+            if (mActivity == null)
+                return;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+                Window window = mActivity.getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            }
+            View titleViewGroup=(View)mActivity.findViewById(R.id.hide);
+            if ( titleViewGroup== null)
+                return;
+            // 设置头部控件ViewGroup的PaddingTop,防止界面与状态栏重叠
+            int statusBarHeight = getStatusBarHeight(mActivity);
+            titleViewGroup.setPadding(0, statusBarHeight, 0, 0);
+        }
+
+        public void setContxt(Activity activity){
+            mActivity=activity;
+        }
+
+        public void setTitle(String string){
+            TextView title=(TextView)mActivity.findViewById(R.id.title);
+            if(title!=null)
+                title.setText(string);
+        }
+    }
+    public initActivity initActivity(){
+        return initActivity;
     }
 
 

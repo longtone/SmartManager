@@ -14,7 +14,7 @@ public class WelcomeActivity extends BasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-        initWindows(this,null);
+        initActivity.initWindows(this,null);
         final Intent it = new Intent(this, LoginActivity.class); //你要转向的Activity
         Timer timer = new Timer();
         TimerTask task = new TimerTask() {
