@@ -12,8 +12,13 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.carrot.smartmanager.MyApplication;
 import com.app.carrot.smartmanager.R;
 
+
+/**
+ * 其他activity继承此类，获取自定义的相关功能
+ */
 public class BasicActivity extends AppCompatActivity{
 
     private  static Toast mToast;
@@ -26,22 +31,13 @@ public class BasicActivity extends AppCompatActivity{
 
     }
 
-
-    private static int getStatusBarHeight(Context context) {
-        int result = 0;
-        int resourceId = context.getResources().getIdentifier(
-                "status_bar_height", "dimen", "android");
-        if (resourceId > 0) {
-            result = context.getResources().getDimensionPixelSize(resourceId);
-        }
-        return result;
-    }
+    //设置全屏;
     public  void setFullScreen(Activity activity){
         activity.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
         activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
     }
 
-
+    //使用toast
     public void showToast(Context context,String string ,int length){
         if (null != mToast) {
             mToast.setText(string);
@@ -52,10 +48,22 @@ public class BasicActivity extends AppCompatActivity{
         mToast.show();
 
     }
+
+    //取消toast
     public void cancelToast() {
         if (mToast != null) {
             mToast.cancel();
         }
+    }
+
+    private static int getStatusBarHeight(Context context) {
+        int result = 0;
+        int resourceId = context.getResources().getIdentifier(
+                "status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = context.getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 
 
@@ -119,6 +127,20 @@ public class BasicActivity extends AppCompatActivity{
                 title.setText(string);
         }
     }
+
+    public int getScremWidth(){
+        WindowManager wm = (WindowManager) MyApplication.getContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        return wm.getDefaultDisplay().getWidth();
+
+    }
+    public int getScremHeight(){
+        WindowManager wm = (WindowManager) MyApplication.getContext()
+                .getSystemService(Context.WINDOW_SERVICE);
+        return wm.getDefaultDisplay().getHeight();
+
+    }
+
     public initActivity initActivity(){
         return initActivity;
     }

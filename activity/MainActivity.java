@@ -8,11 +8,13 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.app.carrot.smartmanager.R;
-import com.app.carrot.smartmanager.fragment.MainFragment;
-import com.app.carrot.smartmanager.fragment.NewsFragment;
 import com.app.carrot.smartmanager.fragment.SettingFragment;
+import com.app.carrot.smartmanager.fragment.NewsFragment;
+import com.app.carrot.smartmanager.fragment.ToolFragment;
 
 public class MainActivity extends BasicActivity {
 
@@ -21,7 +23,7 @@ public class MainActivity extends BasicActivity {
     //一共三个
     private static int mPageNumber=3;
     //实例化三个fragment
-    private static Fragment []fragmentList={new NewsFragment(),new SettingFragment(),new MainFragment()};
+    private static Fragment []fragmentList={new NewsFragment(),new ToolFragment(),new SettingFragment()};
     //标记
     private  static String ARG_SECTION_NUMBER = "section_number";
 
@@ -57,13 +59,29 @@ public class MainActivity extends BasicActivity {
 
         //定义并设置viewpage的适配器
         mViewPager = (ViewPager) findViewById(R.id.viewpage);
+        assert mViewPager != null;
+        mViewPager.setOffscreenPageLimit(3);
         mViewPager.setAdapter(mSectionsPagerAdapter);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab);
+
         //为tablayout绑定viewpage
+        assert tabLayout != null;
         tabLayout.setupWithViewPager(mViewPager);
         //设置tablayout显示方式
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         Log.i("myapp","creat");
+        ImageView mymenu= (ImageView) findViewById(R.id.mymenu);
+        assert mymenu != null;
+        mymenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mViewPager.setCurrentItem(2);
+            }
+        });
+    }
+
+    public void gotoSetting(){
+
     }
 
     /**
@@ -81,7 +99,6 @@ public class MainActivity extends BasicActivity {
         public Fragment getItem(int position) {
             Log.i("myapp","getitem");
             return fragmentList[position];
-
         }
 
         @Override
