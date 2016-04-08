@@ -3,21 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.app.carrot.smartmanager.fragment.NewsFragment">
+    tools:context="com.app.carrot.smartmanager.fragment.NewsFragment"
+    android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <com.app.carrot.smartmanager.activity.SlideShowView
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:id="@+id/slideshow"
+        android:layout_weight="0.20" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
         android:id="@+id/button"
-        android:layout_gravity="center_horizontal|top" />
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/listView"
         android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

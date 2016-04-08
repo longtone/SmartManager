@@ -4,6 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.app.carrot.smartmanager.activity.FeeActivity">
+    tools:context=".activity.TollActivity">
     <include layout="@layout/bar"></include>
 </LinearLayout>

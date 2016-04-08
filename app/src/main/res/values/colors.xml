@@ -6,4 +6,5 @@
     <color name="maincolor">#03d069</color>
     <color name="white">#ffffff</color>
     <color name="SelectedTextColor">#daff07</color>
+    <color name="title_backgrond">#51d2cbcb</color>
 </resources>

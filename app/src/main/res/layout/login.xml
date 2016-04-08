@@ -8,7 +8,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:showDividers="middle"
         android:divider="@drawable/divide"
         android:layout_gravity="center_horizontal|top"
@@ -18,7 +18,7 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="73dp"
-            android:layout_gravity="center_horizontal"></GridLayout>
+            android:layout_gravity="center_horizontal"/>
 
 
         <LinearLayout
@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="账号:"
+                android:text="@string/acount"
                 android:layout_weight="5"
                 android:id="@+id/textView"
                 android:gravity="center" />
@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="密码"
+                android:text="@string/password"
                 android:layout_weight="5"
                 android:id="@+id/textView4"
                 android:gravity="center" />
@@ -68,12 +68,35 @@
                 />
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="登陆"
-            android:id="@+id/login"
-            android:layout_gravity="center_horizontal" />
+            android:gravity="center">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rember"
+                android:id="@+id/checkBox2"
+                android:checked="false" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_login"
+                android:id="@+id/checkBox"
+                android:checked="false" />
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_login"
+        android:id="@+id/login"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>
