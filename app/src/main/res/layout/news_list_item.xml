@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我市展开学习雷锋活动"
+            android:id="@+id/list_title"
+            android:textColor="#020000"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="发布时间：2016年4月10日"
+            android:id="@+id/list_time"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="多年来，雷锋精神鼓舞和激励着一代又一代的青少年不断进步，茁壮成材。在春回大地的阳春三月里，祖国大地将再度掀起学习雷锋精神活动的高潮。为了发扬和深化雷锋精神，倡导社会新风，推动志愿服务活动的深入开展，Text"
+            android:id="@+id/list_text"
+            android:textColor="#010000"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

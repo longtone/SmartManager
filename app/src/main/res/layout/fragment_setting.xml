@@ -1,3 +1,4 @@
+<!--suppress CheckTagEmptyBody, CheckTagEmptyBody -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,6 +26,7 @@
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
 
+    <!--suppress CheckTagEmptyBody, CheckTagEmptyBody, CheckTagEmptyBody -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -37,25 +39,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"></FrameLayout>
+            android:layout_weight="1"/>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"></FrameLayout>
+            android:layout_weight="1"/>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"></FrameLayout>
+            android:layout_weight="1"/>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="3"></FrameLayout>
+            android:layout_weight="3"/>
     </LinearLayout>
 
 </LinearLayout>
