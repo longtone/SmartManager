@@ -79,14 +79,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/rember"
                 android:id="@+id/rember"
-                android:checked="false" />
+                android:checked="true" />
 
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/auto_login"
-                android:id="@+id/checkBox"
-                android:checked="false" />
+                android:id="@+id/cbox_auto"
+                android:checked="true" />
 
         </LinearLayout>
 
